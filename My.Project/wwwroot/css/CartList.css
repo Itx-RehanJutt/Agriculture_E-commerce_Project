@@ -1,0 +1,39 @@
+﻿.cart-item {
+    background-color: #ffecec;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+    .cart-item img {
+        width: 80px;
+        height: auto;
+    }
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f57224;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #999;
+}
+
+.summary-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-orange {
+    background-color: #f57224;
+    color: #fff;
+}
+
+    .btn-orange:hover {
+        background-color: #e4601c;
+    }

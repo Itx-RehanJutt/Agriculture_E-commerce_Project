@@ -1,0 +1,45 @@
+﻿@using Infrastructure.ViewModels
+@model LoginVM
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+<link rel="stylesheet" href="~/css/LoginSignUp.css" asp-append-version="true" />
+<style>
+    .field-validation-error {
+        color: red !important;
+    }
+</style>
+<!--Login Form Start-->
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form asp-controller="Home" asp-action="Auth" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger list-unstyled"></div>
+        <div class="input-group">
+            <input asp-for="UserName" type="email" placeholder="Email">
+            <span asp-validation-for="UserName"></span>
+        </div>
+
+        <div class="input-group">
+            <input asp-for="Password" type="password" placeholder="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="forgot-password" onclick="alert('Redirect to Forgot Password page')">Forgot Password?</div>
+        <div class="input-group">
+            <button type="submit">Login</button>
+        </div>
+        <div>
+            <p>Don't have an account?<a asp-controller="Home" asp-action="SignUp"> Signup</a></p>
+            <p>---------------------- Or -------------------------</p>
+        </div>
+        <div class="input-group">
+            <a href="#">Login with Facebook</a>
+        </div>
+        <br>
+        <div id="Login">
+            <a href="#">Login with Google</a>
+        </div>
+    </form>
+</div>
+

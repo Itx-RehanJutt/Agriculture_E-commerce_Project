@@ -1,0 +1,53 @@
+﻿@using Infrastructure.ViewModels
+@model SignUpVM
+@{
+    Layout = null;
+    ViewData["Title"] = "SingUp";
+}
+<link rel="stylesheet" href="~/css/LoginSignUp.css" asp-append-version="true" />
+<style>
+    .field-validation-error {
+        color: red !important;
+    }
+</style>
+<!--SignUp Form Start-->
+<div class="login-container">
+    <h2>SignUp</h2>
+
+    <form asp-controller="Home" asp-action="SignUp" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger list-unstyled"></div>
+        <div class="input-group">
+            <input asp-for="Name" type="text" placeholder="Enter Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="input-group">
+            <input asp-for="Email" type="email" placeholder="Enter Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="input-group">
+            <input asp-for="PhoneNo" type="text" placeholder="Enter Phone No">
+            <span asp-validation-for="PhoneNo"></span>
+        </div>
+
+        <div class="input-group">
+            <input asp-for="Password" type="password" placeholder="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="forgot-password" onclick="alert('Redirect to Forgot Password page')">Forgot Password?</div>
+        <div class="input-group">
+            <button type="submit">SignUp</button>
+        </div>
+        <div>
+            <p>If You have an account?<a asp-controller="Home" asp-action="Auth">Login</a></p>
+            <p>---------------------- Or -------------------------</p>
+        </div>
+        <div class="input-group">
+            <a href="#">SignUp with Facebook</a>
+        </div>
+        <br>
+        <div id="Login">
+            <a href="#">Signup with Google</a>
+        </div>
+    </form>
+</div>
+

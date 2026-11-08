@@ -1,0 +1,44 @@
+﻿<div>
+    <section class="breadcrumb-section py-5 text-center d-flex align-items-center">
+        <div class="container ">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Contact</a></li>
+                </ol>
+                <h1 class="fw-bold text-white">Contact</h1>
+            </nav>
+        </div>
+    </section>
+</div>
+@* Card Section *@
+<section class="container py-5">
+    <div class="row px-5">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body bg-success p-5">
+                    <h5 class="card-title">About</h5>
+                    <p class="card-text">Lorem ipsum is simply free text used by copytypinh refreshing.Neque porro est qui</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body bg-success bg-opacity-25 p-5">
+                    <h5 class="card-title">Contact</h5>
+                    <p class="card-text">+1- (246) 333-0079 <br /> support@agrios.com <br /> Mon - Fri:7:00 am - 6:00 pm.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-warning">
+                <div class="card-body p-5">
+                    <h5 class="card-title">Address</h5>
+                    <p class="card-text">66 Broklun Road Golden Street, New Your United States of Ameriaca</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+@(await Component.InvokeAsync("Comment"))

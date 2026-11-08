@@ -1,0 +1,66 @@
+﻿@using Infrastructure.ViewModels
+
+<!-- Vendor CSS-->
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/wow/animate.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/slick/slick.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+<link href="~/CoolAdmin-master/CoolAdmin-master/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="~/CoolAdmin-master/CoolAdmin-master/css/theme.css" rel="stylesheet" media="all">
+
+<!-- BREADCRUMB-->
+<section class="au-breadcrumb bg-dark m-t-75">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="au-breadcrumb-content">
+                        <div class="au-breadcrumb-left">
+                            <span class="au-breadcrumb-span">You are here:</span>
+                            <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                <li class="list-inline-item active">
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="list-inline-item seprate">
+                                    <span>/</span>
+                                </li>
+                                <li class="list-inline-item">Create New Order</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END BREADCRUMB-->
+<section>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7">
+                    @* @(await Component.InvokeAsync("Address", new AddressCreateVM())) *@
+                    <div id="shippingAddressSection">
+                        @if (ViewBag.HasAddress)
+                        {
+                            @await Component.InvokeAsync("ShippingAddress", new { customerId = ViewBag.CustomerId }) <!-- ✅ Agar Address hai toh ye show hoga -->
+                        }
+                        else
+                        {
+                            @await Component.InvokeAsync("Address", new AddressCreateVM()) <!-- ✅ Nahi hai toh Address Form -->
+                        }
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="col-lg-5">
+                    @(await Component.InvokeAsync("OrderCart"))
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

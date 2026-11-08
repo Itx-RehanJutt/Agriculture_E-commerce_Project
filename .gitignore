@@ -1,0 +1,37 @@
+# Visual Studio and IDE files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build output
+[Bb]in/
+[Oo]bj/
+TestResults/
+artifacts/
+
+# Generated and local tooling files
+*.cache
+*.db
+*.log
+*.tmp
+*.temp
+*.csproj.user
+*.vsidx
+*.Up2Date
+TemplateEngineHost/vs/
+
+# Local environment and secrets
+appsettings.*.json
+!appsettings.json
+secrets.json
+secrets.*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives and compiler leftovers
+*.zip
+a.out

@@ -1,0 +1,206 @@
+﻿@using Infrastructure.ViewModels
+@using My.Project.Areas.Admin.ViewModel
+@model IEnumerable<ProductVM>
+
+<!-- BREADCRUMB-->
+<section class="au-breadcrumb">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="au-breadcrumb-content">
+                        <div class="au-breadcrumb-left">
+                            <span class="au-breadcrumb-span">You are here:</span>
+                            <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                <li class="list-inline-item active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="list-inline-item seprate">
+                                    <span>/</span>
+                                </li>
+                                <li class="list-inline-item">Product</li>
+                            </ul>
+                        </div>
+                        <a asp-area="Admin" asp-controller="Product" asp-action="ProductCreate" class="au-btn au-btn-icon au-btn--green">
+                            <i class="zmdi zmdi-plus"></i>add item
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END BREADCRUMB-->
+<!-- STATISTIC-->
+<section>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- USER DATA-->
+                    <div class="user-data m-b-30">
+                        <h3 class="title-3 m-b-30">
+                            <i class="zmdi zmdi-account-calendar"></i>Product List
+                        </h3>
+                        @if (ViewBag.isProductDelete != null)
+                        {
+                            if (Convert.ToString(ViewBag.isProductDelete) == "1")
+                            {
+                                <h3>Product deleted</h3>
+                            }
+                            else
+                            {
+                                <h3>error while deleting</h3>
+                            }
+                        }
+                        <table class="table table-borderless align-middle mt-3">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>
+                                    @* <th>Product Details</th> *@
+                                    <th>IsActive</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Count() > 0)
+                                {
+                                    int Index = 1;
+                                    foreach (var item in Model)
+                                    {
+
+                                        <!-- Blog 1 -->
+                                        <tr>
+                                            <td>@Index</td>
+                                            <td>
+                                                <img src="~/Product/Product_Pic/@item.ProductImage" alt="profile"
+                                                class="profile-pic me-2">
+                                            </td>
+                                            <td>
+                                                <div class="table-data__info">
+                                                    <h6>@item.ProductName</h6>
+                                                    <span>
+                                                        <a href="#">@item.Category</a>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            @* <td class="scrollable-td">@item.ProductDiscription</td> *@
+                                            <td>
+                                                @if (item.IsActive)
+                                                {
+                                                    <span class="text-success">Yes</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-danger">No</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @item.Price
+                                            </td>
+                                            <td>
+                                                <div class="fs-5 row">
+                                                    <!-- Button trigger modal -->
+                                                    <a asp-area="Admin" asp-controller="Product" asp-action="ProductDelete" asp-route-id="@item.ProductId" class="btn btn-danger">
+                                                        Delete
+                                                    </a>
+                                                    <!-- Button trigger modal -->
+                                                    <a asp-area="Admin" asp-controller="Product" asp-action="ProductEdit" asp-route-id="@item.ProductId" class="btn btn-primary">
+                                                        Edit
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        Index++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                        @* <div class="table-responsive table-data">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td>
+                                            #
+                                        </td>
+                                        <td>Name</td>
+                                        <td>Guard Image</td>
+                                        <td>Product Description</td>
+                                        <td>Price</td>
+                                        <td>Active</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Count() > 0)
+                                    {
+                                        int index = 1;
+                                        foreach (var item in Model)
+                                        {
+                                            <tr id="list-example">
+                                                <td>
+                                                    <p>@item.ProductId</p>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>@item.ProductName</h6>
+                                                        <span>
+                                                            <a href="#">@item.Category</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="image">
+                                                        <img width="75" height="75" src="~/Product/Product_Pic//@item.ProductImage" alt="John Doe" />
+                                                    </div>
+                                                </td>
+                                                <td class="scrollable-section border p-3 overflow-scroll" style="height: 200px;">
+                                                    <span  class="role admin ">@item.ProductDiscription</span>
+                                                </td>
+                                                <td>
+                                                    <span class="role admin">@item.Price</span>
+                                                </td>
+                                                <td>
+                                                    @if (item.IsActive)
+                                                    {
+                                                        <span class="role admin">YES</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="role admin">NO</span>
+
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                            <i class="zmdi zmdi-mail-send"></i>
+                                                        </button>
+                                                        <a asp-area="Admin" asp-controller="CMS" asp-action="ProductEdit" asp-route-id="@item.ProductId" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                           <i class="zmdi zmdi-edit"></i>
+                                                        </a>
+                                                        <a asp-area="Admin" asp-controller="CMS" asp-action="ProductDelete" asp-route-id="@item.ProductId" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </a>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                        index++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div> *@
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace DbEntities.Entities;
+
+public partial class Category
+{
+    public int CategoryId { get; set; }
+
+    public string CategoryName { get; set; } = null!;
+
+    public string? CategoryImage { get; set; }
+
+    public string? CategoryDiscription { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public DateTime? CreatedDate { get; set; }
+
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+}

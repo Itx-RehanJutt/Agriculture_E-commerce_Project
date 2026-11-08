@@ -1,0 +1,94 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora , Roboto';
+}
+/* Admin Panel CSS Start */
+.navbar {
+    background-color: #f9f9ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 250px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.user-profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user-text {
+    font-weight: 600;
+    color: #333;
+    margin-left: 8px;
+}
+
+.sidebar {
+    background-color: #f4f7fe;
+    height: 100vh;
+    padding: 20px 8px 0 8px;
+}
+
+    .sidebar a {
+        text-decoration: none;
+        color: #6c757d;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        display: block;
+        padding: 10px 20px;
+        margin-bottom: 8px;
+        transition: 0.3s;
+    }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 8px;
+        }
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.status-permanent {
+    background-color: #e0f2fe;
+    color: #3b82f6;
+}
+
+.status-contract {
+    background-color: #f3e8ff;
+    color: #9333ea;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* Admin Panel CSS End */
+.scrollable-td {
+    max-height: 100px; /* Restrict the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    white-space: normal; /* Ensure text wraps properly */
+    border: 1px solid #ddd; /* Optional: Add border */
+    padding: 10px; /* Add padding for better appearance */
+}
+

@@ -1,0 +1,312 @@
+﻿/* Custom CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url(../Images/Home_Page_Pic/First_Home_Pic.svg);
+    background-position :center;
+    background-repeat :no-repeat;
+    background-size:cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+    .hero-section .btn {
+        background-color: #4BAF47;
+    }
+
+/* Featured Section */
+.featured-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+    .featured-section h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .featured-section p {
+        font-size: 1.1rem;
+        color: #777;
+    }
+
+/* Offer Section */
+.offer-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+    .offer-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .offer-section .card {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+        .offer-section .card:hover {
+            transform: translateY(-10px);
+        }
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #56c596;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+    .cta-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+/* Farmers Section */
+.farmers_section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+    .farmers_section img {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+    }
+
+    .farmers_section h5 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+.news-section {
+    padding-top: 4rem;
+    background-color: #fff;
+}
+
+    .news-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .news-section img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+/* Contact Section */
+.contact-section {
+    background-color: #f9f9f9;
+    background-image: url(../Images/Section_Image/div.elementor-widget-wrap\ \(1\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+    .contact-section h1 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-section .form-input {
+        color: #878680 !important;
+    }
+
+    .contact-section button {
+        background-color: #4BAF47;
+        color: #fff;
+    }
+
+/* Background for header */
+.agriculture-header {
+    background-color: #E9F1EE;
+    background-image: url(../Images/Home_Page_Pic/Frame\ 3384411.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Green box for text */
+.agriculture-content {
+    background-color: #43a047;
+    color: white;
+}
+
+/* Image of vegetables on the right */
+.agriculture-image img {
+    border-radius: 20px;
+}
+
+/* Icons section styling */
+.icon-section {
+    padding: 30px 0;
+    text-align: center;
+}
+
+    .icon-section .icon {
+        font-size: 50px;
+        margin: 20px;
+    }
+
+/* Bottom icons */
+.bottom-icons img {
+    max-width: 100px;
+    margin: 0 30px;
+}
+
+.health {
+    width: 9rem;
+    margin-top: 2.4rem;
+}
+/*Service Details*/
+.card-text {
+    color: #878680;
+}
+
+.back-color {
+    background-color: #F8F7F0;
+}
+
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+        /* Adjust height for smaller screens */
+        padding: 1rem;
+    }
+
+        .hero-section h1 {
+            font-size: 1.5rem;
+            /* Adjust the font size */
+        }
+
+        .hero-section .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+    .health {
+        width: 6rem;
+        /* Adjust the image size */
+        margin-top: 1.4rem;
+    }
+
+    .featured-section h3 {
+        font-size: 1.5rem;
+        /* Adjust heading font size */
+    }
+
+    .featured-section p {
+        font-size: 0.9rem;
+        /* Adjust paragraph font size */
+    }
+
+    .featured-section img {
+        width: 100%;
+        /* Make the image responsive */
+        margin: 1rem 0;
+    }
+
+    .offer-section h2 {
+        font-size: 1.8rem;
+        /* Adjust the heading size */
+    }
+
+    .offer-section .card {
+        margin-bottom: 1.5rem;
+    }
+
+        .offer-section .card img {
+            height: auto;
+            width: 100%;
+        }
+
+    .offer-section .card-body {
+        padding: 1rem;
+    }
+
+    .agriculture-header {
+        padding: 1rem;
+        background-size: cover;
+    }
+
+    .agriculture-content {
+        padding: 1rem;
+    }
+
+        .agriculture-content h1 {
+            font-size: 1.8rem;
+            /* Adjust header font size */
+        }
+
+        .agriculture-content p {
+            font-size: 0.9rem;
+            /* Adjust paragraph size */
+        }
+
+    .agriculture-image img {
+        width: 100%;
+        /* Make the image responsive */
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .bottom-icons {
+        width: 60px;
+        /* Adjust the size of bottom icons */
+        margin: 0 15px;
+    }
+
+    .farmers-section img {
+        max-width: 150px;
+    }
+
+    .farmers-section h5 {
+        font-size: 1rem;
+    }
+
+    .news-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .news-section img {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-section .container {
+        padding: 1rem;
+    }
+
+    .contact-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section .form-input {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+    }
+
+    .contact-section button {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .contact-section img {
+        display: none; /* Hide the left image on smaller screens */
+    }
+}

@@ -1,0 +1,123 @@
+﻿/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+/* Hero Section */
+.Main-section {
+    background-color: #f8f9fa;
+}
+
+.hero-text h1 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #666;
+}
+
+.hero-text .highlight {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+    .checklist li {
+        color: #28a745;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+.discover-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.get-to-know {
+    font-size: 16px;
+    color: #ffc107;
+    font-weight: 600;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    text-align: center;
+}
+
+    .testimonial-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+.testimonial-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+    .testimonial-card img {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .testimonial-card h5 {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .testimonial-card p {
+        font-size: 0.9rem;
+    }
+
+/* Meet Our Farmers */
+.farmers-section {
+    padding: 50px 0;
+}
+
+    .farmers-section h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+.farmer-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.farmer-card h5 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.farmer-card .share-icon {
+    color: #28a745;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.farmer-card {
+    position: relative;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,62 @@
+﻿<link rel="stylesheet" href="~/css/Navbar.css" asp-append-version="true" />
+<!-- Navbar section -->
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="~/Logo Pic/Logo.svg" alt="Agrios" class="img-fluid offcanvas-title" id="offcanvasNavbarLabel">
+            </a>
+            <button class="navbar-toggler bg-light" type="button" aria-expanded="false" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="~/Logo Pic/Logo.svg" alt="Agrios" class="img-fluid offcanvas-title" id="offcanvasNavbarLabel">
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="offcanvasNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Service">Services</a>
+                        </li>
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link" asp-controller="Home" asp-action="ProductDetail" >Product Details</a> *@
+                        @* </li> *@
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link" href="#">News</a> *@
+                        @* </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        @* <a href="#" class="nav-link"><span style="border: 1px solid rgb(255, 255, 255, 30%); margin-right: 16px;"></span><i class="bi bi-search"></a> *@
+                        <a asp-controller="Home" asp-action="Auth" class="nav-link btn-lg btn-success me-3">Login</a>
+                        <a asp-controller="Home" asp-action="SignUp" class="nav-link btn-lg">SignUp</a>
+                        <div class="call-text ms-4">
+                            <div class="cart-icon me-md-4 me-2">
+                                <a asp-controller="Cart" asp-action="CartItem" class="nav-link"><i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                    <span class="badge rounded-pill">0</span>
+                                </a>
+                            </div>
+                            <a href="#" class="nav-link p-2 rounded-circle me-2" style="border:1px solid #eec044;"><i class="fa-solid fa-phone-volume fa-xl " style="color: #eec044;"></i></a>
+                            <div class="phone-number">Call Anytime <br>+98 (000)-9630</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- End Navbar section -->

@@ -1,0 +1,51 @@
+* {
+    --link-color: #A5A49A;
+    --icon-color: #1F1E17;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    border-bottom: 1px solid rgb(255, 255, 255, 9.8%);
+}
+
+.scrolled {
+    background-color: rgba(0, 128, 0, 0.8);
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link {
+    color: aliceblue !important;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+    .cart-icon .badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: green;
+    }
+
+.call-text {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+    .call-text .phone-icon {
+        margin-right: 5px;
+        color: #ffcc00;
+    }
+
+.phone-number {
+    color: white;
+}

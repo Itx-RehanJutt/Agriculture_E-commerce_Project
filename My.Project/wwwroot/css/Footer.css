@@ -1,0 +1,40 @@
+﻿* {
+    --link-color: #A5A49A;
+    --icon-color: #1F1E17;
+}
+.footer {
+    background-color: #24231D;
+    color: var(--link-color);
+    font-size: small;
+}
+
+.icon_color {
+    background-color: var(--icon-color);
+    color: aliceblue;
+    padding: 16px 12px;
+}
+
+.link-color {
+    background-color: var(--link-color);
+}
+
+.footer .footer-link {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.bg-color-primary {
+    background-color: var(--icon-color);
+    border-top: 2px solid rgba(255,255, 255, 9.8%);
+}
+
+.footer .email-btn {
+    background-color: #4baf47;
+    border: none;
+    color: white;
+}
+
+.footer .news-item-date {
+    color: #ffc107;
+    font-size: 14px;
+}

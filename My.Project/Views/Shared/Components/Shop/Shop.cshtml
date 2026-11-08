@@ -1,0 +1,146 @@
+﻿@using Infrastructure.ViewModels
+@model IEnumerable<ProductVM>
+<link rel="stylesheet" href="~/css/Shop.css" asp-append-version="true" />
+<!-- Breadcrumb Section with Background Image -->
+<section class="breadcrumb-section text-center d-flex align-items-center">
+    <div class="container ">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 justify-content-center">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Shop</li>
+            </ol>
+            <h1 class="fw-bold text-white">Our Shop</h1>
+        </nav>
+    </div>
+</section>
+
+<!-- Main Shop -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 justify-content-center">
+            <button type="button" class="btn btn-warning px-5 py-4 mb-4 text-white">Search Products..</button>
+            <div class="card mb-4">
+                @* <div class="card-body"> *@
+                @*     <h5 class="card-title mb-3 text-body-secondary fw-bold fs-4">Price</h5> *@
+                @*     <div class="d-flex h-100 mb-3"> *@
+                @*         <input type="range" class="w-50" min="1" max="5"> *@
+                @*         <input type="range" class="w-50" min="1" max="5"> *@
+                @*     </div> *@
+                @*     <div class="d-flex justify-content-between align-item-center"> *@
+                @*         <p class="card-text text-color align-self-center">$20 - $100</p> *@
+                @*         <button type="button" style="background-color: #4BAF47;" class="btn px-3 fw-bold text-white">Apply</button> *@
+                @*     </div> *@
+                @* </div> *@
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title mb-3 text-body-secondary fw-bold fs-4">Categories</h5>
+                    <select class="form-select border-0 mb-2 text-color" aria-label="Default select example">
+                        <option selected>Agriculture Products</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <select class="form-select border-0 mb-2 text-color" aria-label="Default select example">
+                        <option selected>Organic Products</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <select class="form-select border-0 mb-2 text-color" aria-label="Default select example">
+                        <option selected>Fresh Vegetables</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <select class="form-select border-0 mb-2 text-color" aria-label="Default select example">
+                        <option selected>Dairy Products</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <select class="form-select border-0 text-color" aria-label="Default select example">
+                        <option selected>Harvest</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="container mt-4">
+                <div class="d-flex justify-content-between mb-3">
+                    <p>Showing 1-9 of 10 results</p>
+                    <div>
+                        <select class="form-select" style="width: 200px;">
+                            <option selected>Default sorting</option>
+                            <option value="@Model.OrderBy(p=> p.Price)">Sort by price: low to high</option>
+                            <option value="@Model.OrderByDescending(p=> p.Price)">Sort by price: high to low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    @if (Model != null && Model.Count() > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <!-- Product 1 -->
+                            <div class="col-md-4 mb-4 btn">
+                                <div class="product-card product" data-id="@item.ProductId">
+                                    <img src="~/Product/Product_Pic/@item.ProductImage" alt="@item.ProductName" class="product-img">
+                                    <h5 class="product-name">@item.ProductName</h5>
+                                    <p class="product-price">$@item.Price</p>
+                                    <span class="star-icon">★</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                    <!-- Product 7 -->
+                    <div class="col-md-4 mb-4 btn">
+                        <div class="product-card product" data-name="Onions" data-price="20.00" data-image="/Product/Product_Pic/onions.svg">
+                            <img src="~/Product/Product_Pic/onions.svg" alt="Onions" class="product-img">
+                            <h5 class="product-name">Onions</h5>
+                            <p class="product-price">$20.00</p>
+                            <span class="star-icon">★</span>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-md-4 mb-4 btn">
+                        <div class="product-card product" data-name="Potatos" data-price="30.00" data-image="/Product/Product_Pic/potatos.svg">
+                            <img src="~/Product/Product_Pic/potatos.svg" alt="Potatos" class="product-img">
+                            <h5 class="product-name">Potatos</h5>
+                            <p class="product-price">$30.00</p>
+                            <span class="star-icon">★</span>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="col-md-4 mb-4 btn">
+                        <div class="product-card product" data-name="Red Grapes" data-price="100.00" data-image="/Product/Product_Pic/red-grapes.svg">
+                            <img src="~/Product/Product_Pic/red-grapes.svg" alt="Red Grapes" class="product-img">
+                            <h5 class="product-name">Red Grapes</h5>
+                            <p class="product-price">$100.00</p>
+                            <span class="star-icon">★</span>
+                        </div>
+                    </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active"><a class=" btn btn-success me-2" asp-controller="Home" asp-action="Shop">1</a></li>
+                            <li class="page-item"><a class="btn page-link" asp-controller="Home" asp-action="Shop">2</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Product List-->

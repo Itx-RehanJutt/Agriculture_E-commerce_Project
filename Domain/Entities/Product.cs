@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace DbEntities.Entities;
+
+public partial class Product
+{
+    public int ProductId { get; set; }
+
+    public int? CategoryId { get; set; }
+
+    public string ProductName { get; set; } = null!;
+
+    public string ProductImage { get; set; } = null!;
+
+    public string ProductDiscription { get; set; } = null!;
+
+    public decimal Price { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public DateTime? CreateDate { get; set; }
+
+    public DateTime? UpdateDate { get; set; }
+
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+
+    public virtual Category? Category { get; set; }
+
+    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+}

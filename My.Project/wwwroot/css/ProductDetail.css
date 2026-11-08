@@ -1,0 +1,91 @@
+﻿/* Background image section */
+/*.breadcrumb-section {
+    background: url('./Shop_Top_Image/title_Shop_details.svg') no-repeat center;
+    background-size: cover;
+    height: 350px;
+}
+
+.breadcrumb-item a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.breadcrumb-section .breadcrumb-item a:hover {
+    color: greenyellow !important;
+}*/
+
+.product-price {
+    color: #4BAF47;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.quantity-selector {
+    width: 100px;
+}
+
+.add-to-cart-btn {
+    background-color: #4BAF47 !important;
+}
+
+.wishlist-btn {
+    background-color: #EEC044 !important;
+}
+
+.icon_colors {
+    background-color: #F8F7F0;
+    color: #333;
+}
+
+.social-share a:hover {
+    color: #007bff !important;
+}
+/* Description and Reviews */
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Review section */
+.review {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+    .review img {
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+.review-details h6 {
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Add a review form */
+.review-form textarea {
+    resize: none;
+}
+
+.review-form input,
+.review-form textarea {
+    margin-bottom: 1rem;
+    background-color: #F8F7F0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-details {
+        margin-top: 1.5rem;
+    }
+
+    .product-image {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Product Details";
+}
+
+@(await Component.InvokeAsync("Product"));
+
+@section Scripts {
+    <script>
+            function setRedirect(page) {
+            document.getElementById("redirectTo").value = page;
+        }
+    </script>
+}

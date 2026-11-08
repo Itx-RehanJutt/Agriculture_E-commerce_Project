@@ -1,0 +1,69 @@
+﻿@using Infrastructure.ViewModels
+@model AddressCreateVM
+@{
+    int CustomerId = Convert.ToInt32(Context.Session.GetInt32("CustomerId"));
+}
+<div class="card">
+    <div class="card-header">New Shipping Address</div>
+    <div class="card-body card-block">
+        <div asp-validation-summary="ModelOnly"></div>
+        <form id="addressForm" asp-controller="Order" asp-action="CreateAddress" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="input-group">
+                    <input class="form-control" type="hidden" asp-for="CustomerID" value="@CustomerId">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-addon">Enter Your Name</div>
+                    <input asp-for="Name" class="form-control">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group mb-3">
+                <div class="input-group">
+                    <div class="input-group-addon">Enter Your Email</div>
+                    <input asp-for="Email" type="email" class="form-control">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group mb-3">
+                <div class="input-group">
+                    <div class="input-group-addon">Enter Your Contact No</div>
+                    <input asp-for="PhoneNo" class="form-control">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="PhoneNo"></span>
+            </div>
+            <div class="form-group mb-3">
+                <div class="input-group">
+                    <div class="input-group-addon">Enter Your City Name</div>
+                    <input asp-for="City" class="form-control">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="City"></span>
+            </div>
+            <div class="form-group mb-3">
+                <div class="input-group">
+                    <div class="input-group-addon">Enter Your Address</div>
+                    <input asp-for="OrderAddress" class="form-control">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="OrderAddress"></span>
+            </div>
+            <div class="form-actions form-group">
+                <button type="submit" class="btn btn-primary">Save Address</button>
+            </div>
+        </form>
+    </div>
+</div>
